@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
 <w:document mc:Ignorable="w14 w15 wp14" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
     <w:body>
         <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
@@ -7,23 +7,17 @@
             </w:pPr>
             <w:proofErr w:type="spellStart"/>
             <w:r>
-                <w:t>Contacts</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r>
-                <w:t xml:space="preserve">API</w:t>
+                <w:t>{{{appName}}}</w:t>
             </w:r>
         </w:p>
         <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
             <w:proofErr w:type="spellStart"/>
             <w:r>
-                <w:t>Contacts</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r>
-                <w:t xml:space="preserve">API</w:t>
+                <w:t>{{{appDescription}}}</w:t>
             </w:r>
         </w:p>
+
+        {{#version}}
         <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
             <w:proofErr w:type="spellStart"/>
             <w:r>
@@ -31,9 +25,64 @@
             </w:r>
             <w:proofErr w:type="spellEnd"/>
             <w:r>
-                <w:t>: 1.0.0</w:t>
+                <w:t>: {{{version}}}</w:t>
             </w:r>
         </w:p>
+        {{/version}}
+
+        {{#infoUrl}}
+        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+                <w:t>>More information</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+                <w:t>: {{{infoUrl}}}</w:t>
+            </w:r>
+        </w:p>
+        {{/infoUrl}}
+
+        {{#infoEmail}}
+        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+                <w:t>Contact Info</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+                <w:t>: {{{infoEmail}}}</w:t>
+            </w:r>
+        </w:p>
+        {{/infoEmail}}
+
+        {{#licenseInfo}}
+        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+                <w:t>License info</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+                <w:t>: {{{licenseInfo}}}</w:t>
+            </w:r>
+        </w:p>
+        {{/licenseInfo}}
+
+        {{#licenseUrl}}
+        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
+            <w:proofErr w:type="spellStart"/>
+            <w:r>
+                <w:t>License</w:t>
+            </w:r>
+            <w:proofErr w:type="spellEnd"/>
+            <w:r>
+                <w:t>: {{{licenseUrl}}}</w:t>
+            </w:r>
+        </w:p>
+        {{/licenseUrl}}
+
+        {{#authMethods}}
         <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
             <w:pPr>
                 <w:pStyle w:val="Heading1"/>
@@ -49,39 +98,37 @@
             </w:r>
             <w:proofErr w:type="spellEnd"/>
         </w:p>
-        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
-            <w:pPr>
-                <w:pStyle w:val="Heading1"/>
-            </w:pPr>
-            <w:proofErr w:type="spellStart"/>
-            <w:r>
-                <w:t>Paths</w:t>
-            </w:r>
-            <w:bookmarkStart w:id="0" w:name="_GoBack"/>
-            <w:bookmarkEnd w:id="0"/>
-            <w:proofErr w:type="spellEnd"/>
-        </w:p>
-        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F" w:rsidRPr="00AE583F">
-            <w:pPr>
-                <w:pStyle w:val="Heading2"/>
-            </w:pPr>
-            <w:r>
-                <w:t>/</w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r>
-                <w:t>users</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-            <w:r>
-                <w:t>/</w:t>
-            </w:r>
-            <w:proofErr w:type="spellStart"/>
-            <w:r>
-                <w:t>register</w:t>
-            </w:r>
-            <w:proofErr w:type="spellEnd"/>
-        </w:p>
+        {{/authMethods}}
+
+        {{#apiInfo}}
+            <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F">
+                <w:pPr>
+                    <w:pStyle w:val="Heading1"/>
+                </w:pPr>
+                <w:proofErr w:type="spellStart"/>
+                <w:r>
+                    <w:t>Paths</w:t>
+                </w:r>
+                <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+                <w:bookmarkEnd w:id="0"/>
+                <w:proofErr w:type="spellEnd"/>
+            </w:p>
+            {{#apis}}
+                {{#operations}}
+                    {{#operation}}
+                        <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F" w:rsidRPr="00AE583F">
+                        <w:pPr>
+                            <w:pStyle w:val="Heading2"/>
+                        </w:pPr>
+                        <w:r>
+                            <w:t>{{path}}</w:t>
+                        </w:r>
+                        </w:p>
+                    {{/operation}}
+                {{/operations}}
+            {{/apis}}
+        {{/apiInfo}}
+
         <w:tbl>
             <w:tblPr>
                 <w:tblStyle w:val="TableGrid"/>
