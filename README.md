@@ -275,6 +275,7 @@ SinatraServerCodegen.java
 SpringMVCServerCodegen.java
 StaticDocCodegen.java
 StaticHtmlGenerator.java
+StaticDocxGenerator.java
 SwaggerGenerator.java
 SwaggerYamlGenerator.java
 SwiftCodegen.java
