@@ -117,13 +117,56 @@
                 {{#operations}}
                     {{#operation}}
                         <w:p w:rsidP="00AE583F" w:rsidR="00AE583F" w:rsidRDefault="00AE583F" w:rsidRPr="00AE583F">
-                        <w:pPr>
-                            <w:pStyle w:val="Heading2"/>
-                        </w:pPr>
-                        <w:r>
-                            <w:t>{{path}}</w:t>
-                        </w:r>
+                            <w:pPr>
+                                <w:pStyle w:val="Heading2"/>
+                            </w:pPr>
+                            <w:r>
+                                <w:t>{{path}}</w:t>
+                            </w:r>
                         </w:p>
+
+                        <w:tbl>
+                            <w:tblPr>
+                                <w:tblStyle w:val="GET"/>
+                                <w:tblW w:type="auto" w:w="0"/>
+                                <w:tblLook w:firstColumn="1" w:firstRow="1" w:lastColumn="0" w:lastRow="0" w:noHBand="0" w:noVBand="1" w:val="04A0"/>
+                            </w:tblPr>
+                            <w:tblGrid>
+                                <w:gridCol w:w="1619"/>
+                                <w:gridCol w:w="1800"/>
+                                <w:gridCol w:w="1566"/>
+                                <w:gridCol w:w="1080"/>
+                                <w:gridCol w:w="2763"/>
+                            </w:tblGrid>
+                            <w:tr>
+                                <w:trPr>
+                                    <w:tblStyle w:val="GET"/>
+                                    <w:trHeight w:val="337"/>
+                                </w:trPr>
+                                <w:tc>
+                                    <w:tcPr>
+                                        <w:tcW w:type="dxa" w:w="1566"/>
+                                        <w:shd w:color="auto" w:fill="E7F9E7" w:val="clear"/>
+                                    </w:tcPr>
+
+                                    <w:p w:rsidP="00346CD5" w:rsidR="00AE583F" w:rsidRDefault="00AE583F"/>
+                                </w:tc>
+                            </w:tr>
+
+                            <w:tr>
+                                <w:trPr>
+                                    <w:trHeight w:val="337"/>
+                                </w:trPr>
+                                <w:tc>
+                                    <w:tcPr>
+                                        <w:tcW w:type="dxa" w:w="1566"/>
+                                        <w:shd w:color="auto" w:fill="E7F9E7" w:val="clear"/>
+                                    </w:tcPr>
+
+                                    <w:p w:rsidP="00346CD5" w:rsidR="00AE583F" w:rsidRDefault="00AE583F"/>
+                                </w:tc>
+                            </w:tr>
+                        </w:tbl>
                     {{/operation}}
                 {{/operations}}
             {{/apis}}
