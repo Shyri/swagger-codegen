@@ -58,7 +58,7 @@ public class ApiInvoker {
    * ISO 8601 date time format.
    * @see https://en.wikipedia.org/wiki/ISO_8601
    */
-  public static final SimpleDateFormat DATE_TIME_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+  public static final SimpleDateFormat DATE_TIME_FORMAT = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
   /**
    * ISO 8601 date format.
@@ -440,7 +440,7 @@ public class ApiInvoker {
              request = new PostRequest(url, headers, contentType, new StringEntity(serialize(body), "UTF-8"), stringRequest, errorListener);
           }
        } else {
-         request = new PostRequest(url, headers, null, null, stringRequest, errorListener);
+         request = new PostRequest(url, headers, null, new StringEntity("", "UTF-8"), stringRequest, errorListener);
        }
     }
     else if ("PUT".equals(method)) {
@@ -454,7 +454,7 @@ public class ApiInvoker {
              request = new PutRequest(url, headers, contentType, new StringEntity(serialize(body), "UTF-8"), stringRequest, errorListener);
           }
        } else {
-          request = new PutRequest(url, headers, null, null, stringRequest, errorListener);
+          request = new PutRequest(url, headers, null, new StringEntity("", "UTF-8"), stringRequest, errorListener);
        }
     }
     else if ("DELETE".equals(method)) {
@@ -468,7 +468,7 @@ public class ApiInvoker {
              request = new DeleteRequest(url, headers, contentType, new StringEntity(serialize(body), "UTF-8"), stringRequest, errorListener);
           }
        } else {
-          request = new DeleteRequest(url, headers, null, null, stringRequest, errorListener);
+          request = new DeleteRequest(url, headers, null, new StringEntity("", "UTF-8"), stringRequest, errorListener);
        }
     }
     else if ("PATCH".equals(method)) {
@@ -482,7 +482,7 @@ public class ApiInvoker {
                 request = new PatchRequest(url, headers, contentType, new StringEntity(serialize(body), "UTF-8"), stringRequest, errorListener);
              }
           } else {
-             request = new PatchRequest(url, headers, null, null, stringRequest, errorListener);
+             request = new PatchRequest(url, headers, null, new StringEntity("", "UTF-8"), stringRequest, errorListener);
           }
        }
     return request;
