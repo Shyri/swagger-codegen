@@ -16,6 +16,7 @@ import com.android.volley.VolleyError;
 {{/imports}}
 
 import org.apache.http.HttpEntity;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
+import java.io.UnsupportedEncodingException;
 
 {{#operations}}
 public class {{classname}} {
@@ -53,7 +55,7 @@ public class {{classname}} {
 {{#allParams}}   * @param {{paramName}} {{description}}
 {{/allParams}}   * @return {{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}}
   */
-  public {{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}} {{nickname}} ({{#allParams}}{{{dataType}}} {{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public {{#returnType}}{{{returnType}}}{{/returnType}}{{^returnType}}void{{/returnType}} {{nickname}} ({{#allParams}}{{{dataType}}} {{paramName}}{{#hasMore}}, {{/hasMore}}{{/allParams}}) throws TimeoutException, ExecutionException, InterruptedException, ApiException, UnsupportedEncodingException {
      Object postBody = {{#bodyParam}}{{paramName}}{{/bodyParam}}{{^bodyParam}}null{{/bodyParam}};
   {{#allParams}}{{#required}}
       // verify the required parameter '{{paramName}}' is set
@@ -95,7 +97,7 @@ public class {{classname}} {
           }
   {{/notFile}}{{#isFile}}
           if ({{paramName}} != null) {
-          localVarBuilder.addBinaryBody("{{baseName}}", {{paramName}});
+          localVarBuilder.addBinaryBody("{{baseName}}", {{paramName}}, ContentType.create("image/jpeg"), {{paramName}}.getName());
           }
   {{/isFile}}{{/formParams}}
 
@@ -129,6 +131,8 @@ public class {{classname}} {
          }
          throw ex;
       } catch (TimeoutException ex) {
+         throw ex;
+      } catch (UnsupportedEncodingException ex) {
          throw ex;
       }
   }
@@ -181,7 +185,7 @@ public class {{classname}} {
       }
       {{/notFile}}{{#isFile}}
       if ({{paramName}} != null) {
-        localVarBuilder.addBinaryBody("{{baseName}}", {{paramName}});
+        localVarBuilder.addBinaryBody("{{baseName}}", {{paramName}}, ContentType.create("image/jpeg"), {{paramName}}.getName());
       }
       {{/isFile}}{{/formParams}}
 
@@ -221,6 +225,8 @@ public class {{classname}} {
       });
     } catch (ApiException ex) {
       errorListener.onErrorResponse(new VolleyError(ex));
+    } catch (UnsupportedEncodingException e) {
+      e.printStackTrace();
     }
   }
   {{/operation}}
